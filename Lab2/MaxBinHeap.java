@@ -65,7 +65,7 @@
         return s.substring(0, s.length() - 2);
     }
 
-    public static void sortArray(int k, int[]a)
+    public static void sortArray(int[]a)
     {
         // sort in place using Heap Sort
     }
