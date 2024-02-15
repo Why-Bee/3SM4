@@ -1,0 +1,68 @@
+﻿
+
+---------------------**TEST BEGINS**--------------------------------
+
+Section1: Testing constructor;
+**Part 1, Valid, Sorted**
+--------Test 1------------
+Output: 
+c0 I c1 I c2 
+Expect: 
+c0 I c1 I c2
+
+**Part 2, Valid, Unsorted**
+--------Test 2------------
+Output: 
+c1 I c3 I c0 I c2 
+Expect: 
+c1 I c3 I c0 I c2
+
+**Part 3, Invalid, Not binary**
+--------Test 3------------
+Message: Invalid argument!
+--------Test 4------------
+Message: Prefix condition violated!Not a prefix-free.
+--------Test 5------------
+Message: Prefix condition violated!Not a prefix-free.
+----------------------------------------------------
+Testing constructor finished!
+----------------------------------------------------
+
+Section 3: Testing getCodewords()
+--------Test 7------------
+Output: [0, 10, 11]
+Expect: [0, 10, 11]
+----------------------------------------------------
+Testing getCodewords() finished!
+----------------------------------------------------
+
+Section 4: Testing convert()
+--------Test 8------------
+Output: [null, I, c0, I, null, null, c1, c2]
+Expect: [null, I, c0, I, null, null, c1, c2]
+----------------------------------------------------
+Testing convert() finished!
+----------------------------------------------------
+
+Section 5: Testing encode()
+--------Test 9------------
+Output: 111010011110
+Expect: 111010011110
+----------------------------------------------------
+Testing encode() finished!
+----------------------------------------------------
+
+Section 6: Testing decode()
+--------Test 10------------
+Output: [c2, c1, c1, c0, c2, c2, c0]
+Expect: [c2, c1, c1, c0, c2, c2, c0]
+----------------------------------------------------
+Testing decode() finished!
+----------------------------------------------------
+
+Section 7: Testing toString()
+--------Test 11------------
+Output: 0 10 110 111 
+Expect: 0 10 110 111 
+
+-----------------------------Testing Done!-------------------------------------
