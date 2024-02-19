@@ -7,12 +7,14 @@
 
  class MaxBinHeap
  {
+    // data menbers (private)
     private int[] heap;
     private int size;
 
+    // constructors
     public MaxBinHeap(int n)
     {
-        if (n < 10)
+        if (n < 10) 
         {
             n = 10;
         }
@@ -23,10 +25,11 @@
     public MaxBinHeap(int[] a)
     { // TODO
         heap = a;
-        size = a.length;
+        size = a.length; // the first element is the root
         buildHeap();
     }
 
+    // public methods as in spec
     public int getSize()
     {
         return size;
@@ -43,7 +46,7 @@
         {
             throw new RuntimeException("Heap is empty");
         }
-        return heap[1];
+        return heap[0]; // in a max heap, the max is at the root
     }
 
     public int deleteMax() throws RuntimeException
@@ -52,6 +55,10 @@
         {
             throw new RuntimeException("Heap is empty");
         }
+        int max = heap[0];
+        heap[0] = heap[size - 1]; // the last element in level order traversal must be put to the root
+        size--;
+        percolateDown(0); // restore the heap property
     }
 
     public String toString()
@@ -69,4 +76,13 @@
     {
         // sort in place using Heap Sort
     }
+
+    // private methods
+    private void percolateDown(int i)
+    {
+        // use the array representation to move a node at index i down to its proper place
+
+        
+    }
+
  }
