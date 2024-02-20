@@ -45,7 +45,7 @@
                 temp[i] = heap[i];
             }
             heap = temp; // temp will be garbage collected
-            System.out,println("Heap size doubled to " + heap.length + ". Old size was " + size);
+            System.out.println("Heap size doubled to " + heap.length + ". Old size was " + size);
         }
         int i = size;
         // place the new element at the end of the array

@@ -32,9 +32,9 @@ class YoungT {
         int n = a[0].length;
         Tableau = new int[k][n];
         int highest = a[0][0];
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < n; j++)
-            {
+        for (int i = 0; i < k; i++) { 
+            for (int j = 0; j < n; j++) // go ghrough the array and assemble the tableau
+            { // algorithm: find the highest element and set it to infinity
                 if (a[i][j] > highest)
                     highest = a[i][j];
 
@@ -122,7 +122,7 @@ class YoungT {
 
     // private methods
     private void restoreTableau()
-    {
+    { // "staircase traversal" algorithm
         int i = 0;
         int j = 0;
         while (i < Tableau.length && j < Tableau[0].length)
